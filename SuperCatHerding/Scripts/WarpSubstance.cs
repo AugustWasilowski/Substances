@@ -19,7 +19,7 @@ public class WarpSubstance : MonoBehaviour
         if (substance)
         {
             float lerp = Mathf.PingPong(Time.time * 2 / cycleTime, 1);
-            substance.SetProceduralFloat("Warp_Intensity", lerp);
+            substance.SetProceduralFloat(floatRangeProperty, lerp);
             substance.RebuildTextures();
             
         }
